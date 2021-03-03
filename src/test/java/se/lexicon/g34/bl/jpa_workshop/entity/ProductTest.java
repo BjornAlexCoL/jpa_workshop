@@ -21,7 +21,7 @@ public class ProductTest {
         Assertions.assertEquals("Mjölk", productTest.getName());
         Assertions.assertEquals(13.25f, productTest.getPrice());
     }
-    
+
     @Test
     @DisplayName("Test 2:Set the values")
     public void test_setValues() {
