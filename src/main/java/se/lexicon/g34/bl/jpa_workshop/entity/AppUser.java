@@ -3,16 +3,16 @@ package se.lexicon.g34.bl.jpa_workshop.entity;
 
 import javax.persistence.*;
 import java.util.Objects;
-@Entity
+//@Entity
 public class AppUser {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // means auto_increment
+    //@Id
+    //@GeneratedValue(strategy = GenerationType.IDENTITY) // means auto_increment
     private int ID;
-    @Column(nullable = false)
+    //@Column(nullable = false)
     private String firstMame;
-    @Column(nullable = false)
+    //@Column(nullable = false)
     private String lastName;
-    @Column(nullable = false)
+    //@Column(nullable = false,unique = true)
     private String email;
 
 //Construktors

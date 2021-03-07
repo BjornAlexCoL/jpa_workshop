@@ -1,31 +1,30 @@
 package se.lexicon.g34.bl.jpa_workshop.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Objects;
 
-@Entity
+//@Entity
 public class Product {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // means auto_increment
+//    @Id
+//    @GeneratedValue(strategy = GenerationType.IDENTITY) // means auto_increment
     public int ID;
+//    @Column(nullable = false)
     String name;
-    float price;
+//    @Column(nullable = false)
+    double price;
 
 
 //Constructors
     public Product() {
     }
 
-    public Product(int ID, String name, float price) {
+    public Product(int ID, String name, double price) {
         this.ID = ID;
         this.name = name;
         this.price = price;
     }
 
-    public Product(String name, float price) {
+    public Product(String name, double price) {
         this.name = name;
         this.price = price;
     }
@@ -47,11 +46,11 @@ public class Product {
         this.name=name;
     }
 
-    public float getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(float price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
@@ -63,7 +62,7 @@ public class Product {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Product product = (Product) o;
-        return ID == product.ID && Float.compare(product.price, price) == 0 && Objects.equals(name, product.name);
+        return ID == product.ID && Double.compare(product.price, price) == 0 && Objects.equals(name, product.name);
     }
 
     @Override

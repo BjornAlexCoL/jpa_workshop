@@ -3,10 +3,10 @@ package se.lexicon.g34.bl.jpa_workshop.entity;
 import javax.persistence.*;
 import javax.transaction.Transactional;
 import java.util.Objects;
-
+//@Entity
 public class OrderItem {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // means auto_increment
+    //@Id
+    //@GeneratedValue(strategy = GenerationType.IDENTITY) // means auto_increment
     private int ID;
     private int quantity;
     private Product product;
@@ -30,7 +30,7 @@ public class OrderItem {
         this.productOrder = productOrder;
     }
     //Methods
-    public float getSubTotal(){
+    public double getSubTotal(){
         return quantity*product.getPrice();
     }
 

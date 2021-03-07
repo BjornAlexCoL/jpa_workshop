@@ -64,7 +64,7 @@ public class OrderItemTest {
     @Test
     @DisplayName("Test 5: Test subtotal")
     public void test_subTotal(){
-        float expexted= orderItemTest.getQuantity()*orderItemTest.getProduct().getPrice();
+        double expexted= orderItemTest.getQuantity()*orderItemTest.getProduct().getPrice();
         OrderItem actual =orderItemTest;
         Assertions.assertEquals(expexted,actual.getSubTotal());
     }
